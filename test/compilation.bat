@@ -5,7 +5,7 @@ mkdir win
 
 for %%f in (*.c) do (
   echo Compiling "%%f"...
-  gcc -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -m64 -std=c99 -fPIC -shared -O1 -s %%f -o win/%%~nf.natify
+  gcc -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -m64 -std=c99 -fPIC -shared -Os -s %%f -o win/%%~nf.natify
   echo Done
 )
 cd ../..
